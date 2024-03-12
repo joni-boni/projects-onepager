@@ -1,20 +1,21 @@
 <template>
+    <h1 class="ml-32.5p text-4xl font-bold mb-2">{{ title }}</h1>
+    <div class="ml-32.5p text-xl text-gray-500 mb-10">{{ subtitle }}</div>
     <div class="grid md:grid-cols-[30%_70%] grid-cols-1 gap-4">
         <div>
             <img :src="image" alt="hero image" class="rounded-lg">
         </div>
         <div class="p-4">
-            <h1 class="text-4xl font-bold mb-10">{{ title }}</h1>
             <div>
                 {{ description }}
             </div>
-            <div class="grid grid-cols-6 gap-4 items-center">
-                <div v-for="(image, index) in images" :key="index" class="rounded justify-self-end ">
-                    <img :src="image.src" class="w-full h-auto">
+            <div class="mt-6 grid grid-cols-2 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4 items-center">
+                <div v-for="(image, index) in images" :key="index" class="rounded flex items-center justify-center">
+                    <img :src="image.src" class="w-auto h-auto">
                 </div>
             </div>
             <div class="mt-4 text-right">
-                <a :href="'https://' + link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 text-center font-bold bg-gray-200 rounded-xl hover:bg-gray-300 mr-10">Projekte</a>
+                <a :href="'https://' + link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 text-center font-bold bg-gray-300 rounded-xl hover:bg-gray-400 mr-10">Zum Projekt</a>
             </div>
         </div>
     </div>
@@ -28,7 +29,8 @@ const props = defineProps({
     title: String,
     description: String,
     link: String,
-    images: Array
+    images: Array,
+    subtitle: String
 });
 
 </script>

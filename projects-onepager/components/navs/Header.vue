@@ -2,13 +2,13 @@
   <div class="bg-gradient-to-br from-slate-100 to-slate-200 p-4 flex flex-col p-4">
     <div class="flex space-x-4 ml-6">
       <div class="ml-4">
-        <a href="x" class="block text-center font-bold hover-effect mr-10">Über mich</a>
+        <a href="#about" class="block text-center font-bold hover-effect mr-10">Über mich</a>
       </div>
       <div class="ml-4">
-        <a href="x" class="block text-center font-bold hover-effect mr-10">Tech-Stack</a>
+        <a href="#tech-stack" class="block text-center font-bold hover-effect mr-10">Tech-Stack</a>
       </div>
       <div class="ml-4">
-        <a href="x" class="block text-center font-bold hover-effect mr-10">Projekte</a>
+        <a href="#projects" class="block text-center font-bold hover-effect mr-10">Projekte</a>
       </div>
     </div>
   </div>

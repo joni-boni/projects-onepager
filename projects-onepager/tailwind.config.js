@@ -9,7 +9,11 @@ module.exports = {
     "./error.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      margin: {
+        '32.5p': '32.5%',
+      },
+    },
   },
   plugins: [],
 }
