@@ -11,10 +11,10 @@
         <h2 class="text-4xl font-bold mb-10 text-left">Tech Stack</h2>
     </div>
     <div class="grid md:grid-cols-4 grid-cols-1 gap-8">
-        <Tech-Stack image="/frontend.png" title="Frontend" description="Nuxt, Vue, JavaScript, Tailwind, HTML" />
-        <Tech-Stack image="/backend.png" title="Backend" description="Laravel, PHP" />
-        <Tech-Stack image="/etc.png" title="Data Science" description="R, R-Shiny, R-Studio, Python" />
-        <Tech-Stack image="/etc.png" title="Other Stuff" description="Docker, Hetzner, MySQL, Cypress, RESTful API, Chroma DB, Forge" />
+        <Tech-Stack image="/frontend.webp" title="Frontend" description="Nuxt, Vue, JavaScript, Tailwind, HTML" />
+        <Tech-Stack image="/backend.webp" title="Backend" description="Laravel, PHP" />
+        <Tech-Stack image="/datascience2.webp" title="Data Science" description="R, R-Shiny, R-Studio, Python" />
+        <Tech-Stack image="/etc2.webp" title="Other Stuff" description="Docker, Hetzner, MySQL, Cypress, RESTful API, Chroma DB, Forge" />
     </div>
     <div id="projects">
         <h2 class="text-4xl font-bold mb-24 mt-36 text-left">Projects</h2>
@@ -34,8 +34,7 @@
             The application is deployed with Laravel Forge via a Docker container.
             This project was built by my Co-Founder and me over the course of eight Months and is currently in use at more than 200 gyms.
             Bellow you can see a demo in a more compact version based on the original project. Username: demo@user.de, Password: linkedin."
-            link="demo.databundles.io/gym/dashboard"
-            tech-stack=""
+            :buttons = customerportalButtons
             :images=customerportalImages
         />
     </div>
@@ -51,7 +50,7 @@
             This project was built by my Co-Founder and me over the course of six months.
             The application is currently in use at more than 30 car sharing companies."
             link="www.google.com"
-            tech-stack=""
+            button="Reporting Dashboard"
             :images=carsharingImages
         />
     </div>
@@ -66,7 +65,7 @@
             It uses a Chroma DB that again stores the data we scraped from the publicly available city website. 
             The project won 2nd Place at the Hackathon.
             A test version of the Chatbot will most likley be available in June 2023."
-            link="www.muensterhack.de/"
+            :buttons=gptButtons
             tech-stack=""
             :images=gptImages
         />
@@ -82,6 +81,7 @@
             The application is built in R-Shiny hosted on a Google Cloud Run and uses a Docker container.
             As of my knowledge, the application ist still presented in University lectures as an example for the easy usage of Opendata."
             link="bike-app-5mlqyiifqa-ey.a.run.app/"
+            button="Bikecounter"
             tech-stack=""
             :images=fahrradzaehlerImages
         />
@@ -97,7 +97,7 @@
             A few projects involved forecasting Models.
             The projects Data Science projects were built in R and Python and also used R-Shiny for the visualization of the results.
             Below you can see a few university projects, since the DFKI projects are not publicly available."
-            link="www.google.com"
+            :buttons=dataScienceButtons
             tech-stack=""
             :images=dataScienceImages
         />
@@ -116,9 +116,13 @@ const customerportalImages = [
     {src: "/logos/swagger.png"},
     {src: "/logos/forge.png"},
     {src: "/logos/tailwind.png"},
-    {src: "/logos/html.png"},
     {src: "/logos/hetzner.png"},
 ]
+
+const customerportalButtons = [{
+    name: 'Demo',
+    link: 'https://demo.databundles.io',
+}]
 
 const carsharingImages = [
     {src: "/logos/nuxt.png"},
@@ -127,7 +131,6 @@ const carsharingImages = [
     {src: "/logos/docker.png"},
     {src: "/logos/leaflet.png"},
     {src: "/logos/tailwind.png"},
-    {src: "/logos/html.png"},
 ]
 
 const gptImages = [
@@ -136,6 +139,11 @@ const gptImages = [
     {src: "/logos/docker.png"},
     {src: "/logos/openai.png"},
 ]
+
+const gptButtons = [{
+    name: 'Hackathon Website',
+    link: 'https://www.muensterhack.de/',
+}]
 
 const fahrradzaehlerImages = [
     {src: "/logos/r.png"},
@@ -151,6 +159,16 @@ const dataScienceImages= [
     {src: "/logos/shiny.png"},
     {src: "/logos/rstudio.png"},
 ]
+const dataScienceButtons = [
+  {
+    name: 'Twitter Analysis',
+    link: 'projects/twitter.html',
+  },
+  {
+    name: 'Impact of GDP on drug consumption',
+    link: 'projects/smoking.html',
+  },
+];
 
 const images = [
     {src: "https://rock-the-prototype.com/wp-content/uploads/2022/01/Nuxt_JavaScript_Framework.jpg"},

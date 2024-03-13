@@ -11,8 +11,8 @@
                     <img :src="image.src" class="w-auto h-auto">
                 </div>
             </div>
-            <div class="mt-4">
-                <a :href="'https://' + link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 text-center font-bold bg-gray-300 rounded-xl hover:bg-gray-400 mr-10">Zum Projekt</a>
+            <div class="mt-6">
+                <a :href="'https://' + link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 text-center font-bold bg-gray-300 rounded-xl hover:bg-gray-400 mr-10">{{ button }}</a>
             </div>
         </div>
         <div class="order-1 md:order-2">
@@ -31,6 +31,7 @@ const props = defineProps({
     link: String,
     images: Array,
     subtitle: String,
+    button: Array,
 });
 
 </script>

@@ -14,8 +14,10 @@
                     <img :src="image.src" class="w-auto h-auto">
                 </div>
             </div>
-            <div class="mt-4 text-right">
-                <a :href="'https://' + link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 text-center font-bold bg-gray-300 rounded-xl hover:bg-gray-400 mr-10">Zum Projekt</a>
+            <div class="flex justify-end mt-6">
+                <div v-for="(button, index) in buttons" :key="index" class="mt-4 text-right">
+                    <a :href="button.link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 text-center font-bold bg-gray-300 rounded-xl hover:bg-gray-400 mr-10">{{ button.name }}</a>
+                </div>
             </div>
         </div>
     </div>
@@ -28,7 +30,7 @@ const props = defineProps({
     image: String,
     title: String,
     description: String,
-    link: String,
+    buttons: Array,
     images: Array,
     subtitle: String
 });
