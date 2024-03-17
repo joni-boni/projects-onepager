@@ -15,29 +15,33 @@
       </div>
   </div>
 
-  <div class=" delay-150 grid md:grid-cols-4 grid-cols-1 gap-8 mb-32">
+  <div class=" delay-150 grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-8 mb-32">
     <Tech-Stack
       image="tech-stack/frontend.svg"
       title="Frontend"
       description="Nuxt, Vue, JavaScript, Tailwind, HTML"
+      :images=frontendImages
     />
     <Tech-Stack
       image="tech-stack/backend.svg"
       title="Backend"
-      description="Laravel, PHP"
+      description="Laravel, PHP, Django"
+      :images=backendImages
     />
     <Tech-Stack
       image="tech-stack/data-science.svg"
       title="Data Science"
-      description="R, R-Shiny, R-Studio, Python"
+      description="R, R-Shiny, R-Studio, Python, Scikit-Learn, Pandas, Plotly, Leaflet"
+      :images=dataImages
     />
     <Tech-Stack
       image="tech-stack/etc.svg"
       title="Other Stuff"
-      description="Docker, Hetzner, MySQL, Cypress, RESTful API, Chroma DB, Forge"
+      description="Docker, Hetzner, MySQL, MariaDB, PostgreSQL, RESTful API, Chroma DB, Forge, GCP, Firebase, OpenAI API, Swagger, Cypress, CI/CD, "
+      :images=etcImages
     />
   </div>
-  <div id="tech-stack" class="bg-[#EE99C2] p-4 rounded-t-xl mb-2 shadow-lg">
+  <div id="projects" class="bg-[#EE99C2] p-4 rounded-t-xl mb-2 shadow-lg">
       <div class="bg-white rounded-lg inline-block px-4 text-center py-4">
           <h2 class="text-[#0C359E] text-4xl mb-0 font-coding">
               < Project Selection >
@@ -84,10 +88,11 @@
       title="Münster GPT"
       subtitle="A Chatbot that answers questions about the city of Münster."
       description="The Chatbot was built during the MSHACK23, and as part of the solution enabler program an ongoing project, that my team and I are working on. 
-            The Chatbot is connected to OpenAI's GPT-4 API and is built in Python.
+            The Chatbot is connected to OpenAI's GPT-4 API and is built in Python using Django.
             It uses a Chroma DB that again stores the data we scraped from the publicly available city website. 
-            The project won 2nd Place at the Hackathon.
-            A test version of the Chatbot will most likley be available in June 2023."
+            The project won 2nd Place at the Hackathon. 
+            A test version of the Chatbot will most likley be available in June 2023. 
+            Feel free to go to the website and checkout our 2nd place"
       :buttons="gptButtons"
       tech-stack=""
       :images="gptImages"
@@ -137,6 +142,58 @@
 </template>
 
 <script setup>
+useHead({
+  title: 'Jonas Greis',
+})
+const frontendImages = [
+  { src: "/logos/nuxt.png" },
+  { 
+    src: "/logos/javascript.png",
+    isSquare: 1 
+  },
+  { src: "/logos/vue.png" },
+  { src: "/logos/tailwind.png" },
+  { src: "/logos/html.png" },
+];
+const backendImages = [
+  { src: "/logos/php.png" },
+  { src: "/logos/laravel.png" },
+  { src: "/logos/django.png" },
+];
+const dataImages = [
+  { 
+    src: "/logos/r.png",
+    isSquare: 1 
+  },
+  { src: "/logos/python.png" },
+  { 
+    src: "/logos/shiny.png",
+    isSquare: 1 
+  },
+  { src: "/logos/rstudio.png" },
+  { src: "/logos/pandas.png" },
+  { src: "/logos/plotly.png" },
+  { src: "/logos/scikit-learn.png" },
+
+];
+const etcImages = [
+    { src: "/logos/chroma.svg" },
+    { src: "/logos/mysql.svg" },
+    { src: "/logos/docker.png" },
+    { src: "/logos/swagger.png" },
+    { src: "/logos/forge.png" },
+    { src: "/logos/hetzner.png" },
+    { src: "/logos/ggcloud.png" },
+    { src: "/logos/cypress.svg"},
+    { src: "/logos/firebase.png"},
+    { src: "/logos/mariadb.png"},
+    { src: "/logos/postgresql.png"},
+    { src: "/logos/openai.png"},
+    { src: "/logos/restapi.webp",
+    isSquare: 1 
+    },
+];
+
 const customerportalImages = [
   { src: "/logos/nuxt.png" },
   { 
@@ -153,6 +210,8 @@ const customerportalImages = [
   { src: "/logos/tailwind.png" },
   { src: "/logos/hetzner.png" },
   { src: "/logos/html.png" },
+  { src: "/logos/cypress.svg"}
+
 ];
 
 const customerportalButtons = [
@@ -173,6 +232,11 @@ const carsharingImages = [
   { src: "/logos/leaflet.png" },
   { src: "/logos/tailwind.png" },
   { src: "/logos/html.png"},
+  { src: "/logos/restapi.webp",
+    isSquare: 1 
+  },
+
+
 ];
 
 const gptImages = [
@@ -220,6 +284,10 @@ const dataScienceImages = [
     isSquare: 1 
   },
   { src: "/logos/rstudio.png" },
+  { src: "/logos/pandas.png" },
+  { src: "/logos/scikit-learn.png" },
+  { src: "/logos/plotly.png" },
+
 ];
 const dataScienceButtons = [
   {
@@ -244,6 +312,8 @@ const WebsiteImages = [
   { src: "/logos/html.png"},
   { src: "logos/hetzner.png"},
   { src: "logos/google-analytics.png"},
+  { src: "logos/firebase.png"},
+
 ];
 const WebsiteButtons = [
 {
@@ -253,9 +323,3 @@ const WebsiteButtons = [
 ];
 
 </script>
-<style scoped>
-.custom-bg {
-  background-image: url('/project-images/chatbot.svg');
-  background-size: cover; /* oder eine spezifische Größe */
-  }
-</style>

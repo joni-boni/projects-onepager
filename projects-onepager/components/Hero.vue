@@ -6,7 +6,7 @@
         <div class="p-0">
             <h1 class="text-4xl mb-4 font-coding typing">{{ animatedText }}</h1>
             <div >
-              <div class="text-2xl text-gray-500 mb-10 font-coding typing2">{{ animatedText2 }}</div>
+              <div class="text-2xl text-[#0C359E] mb-10 font-coding typing2">{{ animatedText2 }}</div>
             </div>
             <div class="text-justify">
                 {{ description }}

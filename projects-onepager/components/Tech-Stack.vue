@@ -12,6 +12,11 @@
                 </a>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ description }}</p>
             </div>
+            <div class="px-3 grid grid-cols-3 mb-3">
+            <div v-for="(image, index) in images" :key="index" class="rounded flex items-center justify-center p-1" :class="image.isSquare ? 'p-3' : ''">
+                <img :src="image.src" class="w-auto h-auto">
+            </div>
+        </div>
         </div>
     </div>
 </template>
@@ -20,7 +25,8 @@
 const props = defineProps({
     image: String,
     title: String,
-    description: String
+    description: String,
+    images: Array,
 })
 
 </script>

@@ -11,7 +11,7 @@
         <a href="#projects" class="pb-1 text-center font-bold hover-effect lg:mr-12 xl:mr-12 md:mr-12 mr-3">Projects</a>
       </div>
       <div class="ml-2">
-        <a href="https://www.youtube.com/watch?v=msX4oAXpvUE&ab_channel=Splavodo69" target="_blank" rel="noopener noreferrer" class="bg-white p-1 rounded text-center font-bold hover-effect lg:mr-12 xl:mr-12 md:mr-12 mr-3"> need a laugh?</a>
+        <a href="https://www.youtube.com/watch?v=msX4oAXpvUE&ab_channel=Splavodo69" target="_blank" rel="noopener noreferrer" class="pb-1 rounded text-center font-bold hover-effect lg:mr-12 xl:mr-12 md:mr-12 mr-3"> need a laugh?</a>
       </div>
     </div>
   </div>
@@ -22,23 +22,31 @@
 <style scoped>
 .hover-effect {
   position: relative;
+  transition: all 10s ease; /* Ensure the transition applies to transform changes */
+  display: inline-block; /* or 'block', depending on your layout */
+  overflow: hidden; /* Keeps child elements contained within the parent */
 }
 
-.hover-effect::after {
+.hover-effect:hover {
+  background-color: white;
+  transform: scaleX(1); /* Scales the element to its full width */
+}
+
+.hover-effect::before { /* Using ::before for the scaling effect */
   content: '';
   position: absolute;
-  width: 0;
-  height: 2px;
-  background: #EE99C2;
-  bottom: 0;
-  left: 50%;
-  transition: all 0.2s ease;
-  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  width: 100%;
+  height: 100%;
+  background-color: white; /* The background color you want to show on hover */
+  transform: scaleX(0); /* Start scaled to 0 (invisible) */
+  transition: transform 0.3s ease; /* Smooth transition for the transform */
+  left: 0;
+  top: 0;
+  z-index: -1;
 }
 
-.hover-effect:hover::after {
-  width: 100%;
-  left: 0;
-  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+.hover-effect:hover::before {
+  transform: scaleX(1); /* Scale to full width on hover */
 }
+
 </style>
