@@ -218,26 +218,5 @@
       link: "projects/smoking.html",
     },
   ];
-  
-  const images = [
-    {
-      src: "https://rock-the-prototype.com/wp-content/uploads/2022/01/Nuxt_JavaScript_Framework.jpg",
-    },
-    {
-      src: "https://repository-images.githubusercontent.com/657736250/efe020c3-cfc2-41f9-be41-ad581ffc9969",
-    },
-    {
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/2560px-Python_logo_and_wordmark.svg.png",
-    },
-    {
-      src: "https://rock-the-prototype.com/wp-content/uploads/2022/01/Nuxt_JavaScript_Framework.jpg",
-    },
-    {
-      src: "https://repository-images.githubusercontent.com/657736250/efe020c3-cfc2-41f9-be41-ad581ffc9969",
-    },
-    {
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/2560px-Python_logo_and_wordmark.svg.png",
-    },
-  ];
   </script>
   

@@ -7,38 +7,47 @@
       description="I am a full stack developer with a focus on frontend development. I am passionate about creating beautiful and user-friendly web applications. I am also interested in data science and have experience in creating data science applications and dashboards. I am always eager to learn new technologies and improve my skills. I am currently looking for new opportunities to work on exciting projects. Feel free to contact me if you are interested in working with me."
     />
   </div>
-  <div id="tech-stack">
-    <h2 class="text-4xl font-bold mb-10 text-left">Tech Stack</h2>
+  <div id="tech-stack" class="bg-[#EE99C2] p-4 rounded-t-xl shadow-lg mb-2">
+      <div class="bg-white rounded-lg inline-block px-4 text-center py-4">
+          <h2 class="text-[#0C359E] text-4xl mb-0 font-coding">
+              < Tech Stack >
+          </h2>
+      </div>
   </div>
-  <div class="grid md:grid-cols-4 grid-cols-1 gap-8">
+
+  <div class=" delay-150 grid md:grid-cols-4 grid-cols-1 gap-8 mb-32">
     <Tech-Stack
-      image="/frontend.webp"
+      image="tech-stack/frontend.svg"
       title="Frontend"
       description="Nuxt, Vue, JavaScript, Tailwind, HTML"
     />
     <Tech-Stack
-      image="/backend.webp"
+      image="tech-stack/backend.svg"
       title="Backend"
       description="Laravel, PHP"
     />
     <Tech-Stack
-      image="/datascience2.webp"
+      image="tech-stack/data-science.svg"
       title="Data Science"
       description="R, R-Shiny, R-Studio, Python"
     />
     <Tech-Stack
-      image="/etc2.webp"
+      image="tech-stack/etc.svg"
       title="Other Stuff"
       description="Docker, Hetzner, MySQL, Cypress, RESTful API, Chroma DB, Forge"
     />
   </div>
-  <div id="projects">
-    <h2 class="text-4xl font-bold mb-24 mt-36 text-left">Project Selection</h2>
+  <div id="tech-stack" class="bg-[#EE99C2] p-4 rounded-t-xl mb-2 shadow-lg">
+      <div class="bg-white rounded-lg inline-block px-4 text-center py-4">
+          <h2 class="text-[#0C359E] text-4xl mb-0 font-coding">
+              < Project Selection >
+          </h2>
+      </div>
   </div>
 
-  <div class="mt-24 mb-36">
+  <div class="mt-2 mb-36">
     <project-img-left
-      image="/project.png"
+      image="/project-images/customer-portal2.svg"
       title="Customer Portal"
       subtitle="A customer portal for a cash register system specialized on sport facilities."
       description="Full-Stack Web Application built on top of an existing cash register.
@@ -57,23 +66,21 @@
 
   <div class="mt-24 mb-36">
     <project-img-left
-      image="/project.png"
-      title="Reporting Dashboard"
+      image="/project-images/mobility-dashboard.svg"
+      title="Mobility Dashboard"
       subtitle="Reporting Dashboard for a car sharing company focusing on geospacial data."
       description="A Frontend application that shows the data of the logged in car sharing company in a user-friendly and interactive graphs and maps.
             The application is built with Nuxt.js and uses the Leaflet library for the maps.
             The data is pulled via RESTful API from the preexisting backend.
             This project was built by my Co-Founder and me over the course of six months.
             The application is currently in use at more than 30 car sharing companies."
-      link="www.google.com"
-      :buttons="carsharingButtons"
       :images="carsharingImages"
     />
   </div>
 
   <div class="mt-24 mb-36">
     <project-img-left
-      image="/project.png"
+      image="/project-images/muenster-gpt.svg"
       title="Münster GPT"
       subtitle="A Chatbot that answers questions about the city of Münster."
       description="The Chatbot was built during the MSHACK23, and as part of the solution enabler program an ongoing project, that my team and I are working on. 
@@ -89,7 +96,7 @@
 
   <div class="mt-24 mb-36">
     <project-img-left
-      image="/project.png"
+      image="/project-images/bike-counter2.svg"
       title="Bikecounter"
       subtitle="Small Proof-of-Concept for publicly available bike data"
       description="A small R-Shiny application that shows the data of a publicly available bike data (csv) in user-friendly and interactive graphs and maps.
@@ -103,7 +110,7 @@
 
   <div class="mt-24 mb-36">
     <project-img-left
-      image="/project.png"
+      image="/project-images/data-science.svg"
       title="Data Science Analysis and Forecasting"
       description="During my University Studies as well as working at the DFKI I did multiple Data Science Projects.
             They all included the cleaning and analysis of large datasets to look for correlations, trends and outliers.
@@ -112,6 +119,19 @@
             Below you can see a few university projects, since the DFKI projects are not publicly available."
       :buttons="dataScienceButtons"
       :images="dataScienceImages"
+      />
+  </div>
+
+  <div class="mt-24 mb-36">
+    <project-img-left
+      image="/project-images/website.svg"
+      title="Company Website"
+      subtitle="A fast and modern company website using SEO, SEA and Google analytics"
+      description="The Website is built in nuxt and is hostet on a Hetzner server. 
+            The website is optimized for SEO and SEA and uses Google Analytics for tracking. 
+            My Co-Founder and I built the Website together and constantly updated it with new features and content."
+      :buttons="WebsiteButtons"
+      :images="WebsiteImages"
       />
   </div>
 </template>
@@ -155,13 +175,6 @@ const carsharingImages = [
   { src: "/logos/html.png"},
 ];
 
-const carsharingButtons = [
-  {
-    name: "Reporting Dashboard",
-    link: "www.google.com",
-  },
-];
-
 const gptImages = [
   { src: "/logos/python.png" },
   { src: "/logos/chroma.svg" },
@@ -192,7 +205,7 @@ const fahrradzaehlerImages = [
 const bikeButtons = [
   {
     name: "Bikecounter",
-    link: "bike-app-5mlqyiifqa-ey.a.run.app",
+    link: "https://bike-app-5mlqyiifqa-ey.a.run.app",
   },
 ];
 
@@ -219,24 +232,30 @@ const dataScienceButtons = [
   },
 ];
 
-const images = [
-  {
-    src: "https://rock-the-prototype.com/wp-content/uploads/2022/01/Nuxt_JavaScript_Framework.jpg",
+const WebsiteImages = [
+  { src: "/logos/nuxt.png" },
+  { 
+    src: "/logos/javascript.png",
+    isSquare: 1 
   },
-  {
-    src: "https://repository-images.githubusercontent.com/657736250/efe020c3-cfc2-41f9-be41-ad581ffc9969",
-  },
-  {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/2560px-Python_logo_and_wordmark.svg.png",
-  },
-  {
-    src: "https://rock-the-prototype.com/wp-content/uploads/2022/01/Nuxt_JavaScript_Framework.jpg",
-  },
-  {
-    src: "https://repository-images.githubusercontent.com/657736250/efe020c3-cfc2-41f9-be41-ad581ffc9969",
-  },
-  {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/2560px-Python_logo_and_wordmark.svg.png",
+  { src: "/logos/vue.png" },
+  { src: "/logos/docker.png" },
+  { src: "/logos/tailwind.png" },
+  { src: "/logos/html.png"},
+  { src: "logos/hetzner.png"},
+  { src: "logos/google-analytics.png"},
+];
+const WebsiteButtons = [
+{
+    name: "Databundles Website",
+    link: "https://databundles.io/",
   },
 ];
+
 </script>
+<style scoped>
+.custom-bg {
+  background-image: url('/project-images/chatbot.svg');
+  background-size: cover; /* oder eine spezifische Größe */
+  }
+</style>

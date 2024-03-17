@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       '~/components'
   ],
   modules: [
-    'nuxt-headlessui'
+    'nuxt-headlessui',
   ],
   postcss: {
       plugins: {

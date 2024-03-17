@@ -1,19 +1,19 @@
 <template>
-    <div class="bg-amber-50 shadow-md rounded-xl p-12">
+    <div class="shadow-md bg-[#F6F5F5] border-2 rounded-xl p-12 rounded">
         <div class="grid md:grid-cols-[30%_70%] grid-cols-1 gap-4">
             <div>
-                <img :src="image" alt="hero image" class="rounded-lg">
+                <img :src="image" alt="hero image" class="rounded-lg bg-white p-10">
             </div>
             <div>
-                <h1 class="text-4xl font-bold mb-2">{{ title }}</h1>
-                <div class="text-xl text-gray-500 mb-10">{{ subtitle }}</div>
+                <h1 class="text-4xl font-coding font-bold mb-2">{{ title }}</h1>
+                <div class="text-xl text-gray-500 mb-10 font-coding">{{ subtitle }}</div>
                 <div class="text-justify">
                     {{ description }}
                 </div>
 
             </div>
         </div>
-        <div class="mt-3 grid grid-cols-2 lg:grid-cols-12 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4 items-center">
+        <div class="mt-3 grid grid-cols-3 xl:grid-cols-14 lg:grid-cols-10 md:grid-cols-6 sm:grid-cols-6 grid-cols-1 gap-4 items-center">
             <div v-for="(image, index) in images" :key="index" class="rounded flex items-center justify-center" :class="image.isSquare ? 'p-4' : ''">
                 <img :src="image.src" class="w-auto h-auto">
             </div>
