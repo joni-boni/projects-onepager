@@ -9,13 +9,13 @@
   </div>
   <div id="tech-stack" class="bg-[#EE99C2] p-4 rounded-t-xl shadow-lg mb-2">
       <div class="bg-white rounded-lg inline-block px-4 text-center py-4">
-          <h2 class="text-[#0C359E] text-4xl mb-0 font-coding">
-              < Tech Stack >
+          <h2 class="text-[#0C359E] text-3xl mb-0 font-coding">
+            &lt;Tech Stack&gt;
           </h2>
       </div>
   </div>
 
-  <div class=" delay-150 grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-8 mb-32">
+  <div class=" delay-150 grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-8 mb-32">
     <Tech-Stack
       image="tech-stack/frontend.svg"
       title="Frontend"
@@ -35,16 +35,22 @@
       :images=dataImages
     />
     <Tech-Stack
+      image="tech-stack/database.svg"
+      title="Database"
+      description="MySQL, MariaDB, PostgreSQL, Chroma DB"
+      :images=databaseImages
+    />
+    <Tech-Stack
       image="tech-stack/etc.svg"
       title="Other Stuff"
-      description="Docker, Hetzner, MySQL, MariaDB, PostgreSQL, RESTful API, Chroma DB, Forge, GCP, Firebase, OpenAI API, Swagger, Cypress, CI/CD, "
+      description="Docker, Hetzner, RESTful API, Chroma DB, Forge, GCP, Firebase, OpenAI API, Swagger, Cypress, CI/CD, Git"
       :images=etcImages
     />
   </div>
   <div id="projects" class="bg-[#EE99C2] p-4 rounded-t-xl mb-2 shadow-lg">
       <div class="bg-white rounded-lg inline-block px-4 text-center py-4">
-          <h2 class="text-[#0C359E] text-4xl mb-0 font-coding">
-              < Project Selection >
+          <h2 class="text-[#0C359E] text-3xl mb-0 font-coding">
+            &lt;Project selection&gt;
           </h2>
       </div>
   </div>
@@ -145,6 +151,7 @@
 useHead({
   title: 'Jonas Greis',
 })
+
 const frontendImages = [
   { src: "/logos/nuxt.png" },
   { 
@@ -177,8 +184,6 @@ const dataImages = [
 
 ];
 const etcImages = [
-    { src: "/logos/chroma.svg" },
-    { src: "/logos/mysql.svg" },
     { src: "/logos/docker.png" },
     { src: "/logos/swagger.png" },
     { src: "/logos/forge.png" },
@@ -186,12 +191,18 @@ const etcImages = [
     { src: "/logos/ggcloud.png" },
     { src: "/logos/cypress.svg"},
     { src: "/logos/firebase.png"},
-    { src: "/logos/mariadb.png"},
-    { src: "/logos/postgresql.png"},
     { src: "/logos/openai.png"},
     { src: "/logos/restapi.webp",
     isSquare: 1 
     },
+    { src: "/logos/git.png"},
+];
+
+const databaseImages = [
+    { src: "/logos/chroma.svg" },
+    { src: "/logos/mysql.svg" },
+    { src: "/logos/mariadb.png"},
+    { src: "/logos/postgresql.png"},
 ];
 
 const customerportalImages = [

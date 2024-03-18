@@ -1,8 +1,8 @@
 <template>
-    <div class="shadow-md bg-[#F6F5F5] border-2 rounded-xl p-12 rounded">
+    <div class="shadow-md bg-[#F6F5F5] rounded-xl p-12 border-2 rounded">
         <div class="grid md:grid-cols-[30%_70%] grid-cols-1 gap-4">
             <div>
-                <img :src="image" alt="hero image" class="rounded-lg bg-white p-10">
+                <img :src="image" alt="hero image" class="rounded-lg bg-white p-10 border-2 border-dotted border-[#EE99C2]">
             </div>
             <div>
                 <h1 class="text-4xl font-coding font-bold mb-2">{{ title }}</h1>

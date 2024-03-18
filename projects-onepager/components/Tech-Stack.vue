@@ -3,8 +3,8 @@
     <div>
         <div class="bg-white max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700
         transform transition-transform duration-500 hover:scale-110 h-full">
-            <a>
-                <img class="rounded-t-lg p-10" :src="image" alt="" />
+            <a class="flex justify-center border-b-2 py-2">
+                <img class="rounded-t-lg size-36" :src="image" alt="" />
             </a>
             <div class="p-5">
                 <a href="#">
