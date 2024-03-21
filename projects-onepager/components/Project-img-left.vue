@@ -18,16 +18,30 @@
                 <img :src="image.src" class="w-auto h-auto">
             </div>
         </div>
-        <div class="flex justify-start mt-3">
-            <div v-for="(button, index) in buttons" :key="index" class="text-right">
-                <a :href="button.link" target="_blank" rel="noopener noreferrer" class="bg-white rounded inline-block px-6 py-3 text-center font-bold bg-gray-300 rounded-xl hover:bg-gray-400 mr-4">{{ button.name }}</a>
-            </div>
+        <div v-if="buttons" class="font-bold mt-6 text-gray-500">
+            Further Links:
         </div>
+        <div class="grid justify-start mt-3 grid-cols-1 lg:grid-cols-3 xl:grid-cols-3">
+        <div v-for="(button, index) in buttons" :key="index" class="text-left mt-2">
+            <span v-if="button.tooltip" :id="'tooltip-' + index" class='tooltip p-3 bg-blue-400 -mt-14'> {{ button.tooltip }}</span>
+            <a :href="button.link" target="_blank" rel="noopener noreferrer" class="bg-white rounded inline-block px-6 py-3 text-center font-bold bg-gray-300 rounded-xl hover:bg-[#EE99C2] border-2 border-dotted border-[#EE99C2] mr-4" @mouseover="showTooltip(index)" @mouseout="hideTooltip(index)">
+                {{ button.name }}
+            </a>
+        </div>
+    </div>
     </div>
 </template>
 
 <script setup>
-import {defineProps} from 'vue';
+import { ref } from 'vue';
+
+const showTooltip = (index) => {
+    document.getElementById('tooltip-' + index).style.visibility = 'visible';
+};
+
+const hideTooltip = (index) => {
+    document.getElementById('tooltip-' + index).style.visibility = 'hidden';
+};
 
 const props = defineProps({
     image: String,
@@ -35,7 +49,12 @@ const props = defineProps({
     description: String,
     buttons: Array,
     images: Array,
-    subtitle: String
+    subtitle: String,
+    tooltip: String,
 });
-
 </script>
+<style setup>
+.tooltip {
+  @apply invisible absolute;
+}
+</style>

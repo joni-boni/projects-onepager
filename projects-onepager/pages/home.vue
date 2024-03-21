@@ -145,6 +145,8 @@
       :images="WebsiteImages"
       />
   </div>
+
+
 </template>
 
 <script setup>
@@ -229,7 +231,7 @@ const customerportalButtons = [
   {
     name: "Demo",
     link: "https://demo.databundles.io",
-  },
+  }
 ];
 
 const carsharingImages = [
@@ -309,6 +311,11 @@ const dataScienceButtons = [
     name: "Impact of GDP on drug consumption",
     link: "projects/smoking.html",
   },
+  {
+    name: "DFKI Research Paper",
+    link: "https://www.dfki.de/fileadmin/user_upload/DFKI/Medien/News/2022/Aus_unseren_Projekten/Smart-Service-Studie-ForeSight_web.pdf",
+    tooltip: "All Graphs in this Paper were created by me."
+  }
 ];
 
 const WebsiteImages = [
