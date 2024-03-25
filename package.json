@@ -4,7 +4,8 @@
     "@heroicons/vue": "^2.1.1",
     "firebase": "^10.8.1",
     "flowbite": "^2.3.0",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "vue-typed-js": "^0.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.18",

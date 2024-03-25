@@ -4,7 +4,14 @@
       image="developer.jpeg"
       title="Jonas Greis"
       subtitle="Full Stack Developer"
-      description="I am a full stack developer with a focus on frontend development. I am passionate about creating beautiful and user-friendly web applications. I am also interested in data science and have experience in creating data science applications and dashboards. I am always eager to learn new technologies and improve my skills. I am currently looking for new opportunities to work on exciting projects. Feel free to contact me if you are interested in working with me."
+      description=
+      "I am a full stack developer with a focus on frontend development. 
+      I am passionate about creating sleek and user-friendly web applications. 
+      I also have a Background in data science and worked on machine learning and ai projects. 
+      The broad majority of my projects are built in laravel and nuxt.js,
+      but i have used quite a few other technologies aswell during my career. 
+      I am always eager to learn new technologies and improve my skills. 
+      Feel free to contact me."
     />
   </div>
   <div id="tech-stack" class="bg-[#EE99C2] p-4 rounded-t-xl shadow-lg mb-2">
@@ -41,9 +48,15 @@
       :images=databaseImages
     />
     <Tech-Stack
+      image="tech-stack/cloud.svg"
+      title="Cloud"
+      description="Hetzner, Forge, Google Cloud Run, Firebase"
+      :images=cloudImages
+    />
+    <Tech-Stack
       image="tech-stack/etc.svg"
       title="Other Stuff"
-      description="Docker, Hetzner, RESTful API, Chroma DB, Forge, GCP, Firebase, OpenAI API, Swagger, Cypress, CI/CD, Git"
+      description="Docker, RESTful API, OpenAI API, Swagger, Cypress, CI/CD, Git"
       :images=etcImages
     />
   </div>
@@ -188,16 +201,18 @@ const dataImages = [
 const etcImages = [
     { src: "/logos/docker.png" },
     { src: "/logos/swagger.png" },
-    { src: "/logos/forge.png" },
-    { src: "/logos/hetzner.png" },
-    { src: "/logos/ggcloud.png" },
     { src: "/logos/cypress.svg"},
-    { src: "/logos/firebase.png"},
     { src: "/logos/openai.png"},
     { src: "/logos/restapi.webp",
     isSquare: 1 
     },
     { src: "/logos/git.png"},
+];
+const cloudImages = [
+    { src: "/logos/forge.png" },
+    { src: "/logos/hetzner.png" },
+    { src: "/logos/ggcloud.png" },
+    { src: "/logos/firebase.png"},
 ];
 
 const databaseImages = [
