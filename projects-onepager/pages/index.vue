@@ -7,11 +7,9 @@
       description=
       "I am a full stack developer with a focus on frontend development. 
       I am passionate about creating sleek and user-friendly web applications. 
-      I also have a Background in data science and worked on machine learning and ai projects. 
-      The broad majority of my projects are built in laravel and nuxt.js,
-      but i have used quite a few other technologies aswell during my career. 
-      I am always eager to learn new technologies and improve my skills. 
-      Feel free to contact me."
+      I also have a background in data science and have worked on machine learning and AI projects. 
+      The broad majority of my projects are built in Laravel and Nuxt.js, but I have used quite a few other technologies as well during my career. 
+      I am always eager to learn new technologies and improve my skills. Feel free to contact me."
     />
   </div>
   <div id="tech-stack" class="bg-[#EE99C2] p-4 rounded-t-xl shadow-lg mb-2">
@@ -72,16 +70,14 @@
     <project-img-left
       image="/project-images/customer-portal2.svg"
       title="Customer Portal"
-      subtitle="A customer portal for a cash register system specialized on sport facilities."
-      description="Full-Stack Web Application built on top of an existing cash register.
-            The customer portal allows customers to register upon their first visit via a QR code.
-            The gym owners have their own login an can manage the customers and get detailed statistics and evaluation of sold tickets and products. 
-            The backend is built with Laravel and the frontend with Nuxt.js. 
-            The application is hosted on a Hetzner server and uses a MySQL database, 
-            tested with Cypress and the API is documented with Swagger. 
-            The application is deployed with Laravel Forge via a Docker container.
-            This project was built by my Co-Founder and me over the course of eight Months and is currently in use at more than 200 gyms.
-            Bellow you can see a demo in a more compact version based on the original project. Username: demo@user.de, Password: linkedin."
+      subtitle="A customer portal for a cash register system, specialized in sport facilities."
+      description=
+      "This is a full-stack web application built on top of an existing cash register. 
+      The customer portal enables customers to register upon their first visit via a QR code. 
+      Gym owners have their own login and can manage customers, obtaining detailed statistics and evaluations of sold tickets and products. 
+      The backend is developed with Laravel, while the frontend utilizes Nuxt.js. 
+      The application is hosted on a Hetzner server, leveraging a MySQL database, and is tested with Cypress. 
+      Furthermore, the API is documented with Swagger, and the application deployment is managed with Laravel Forge via a Docker container. This project was co-developed by my co-founder and me over the course of eight months and is currently in use at more than 200 gyms. Below, you can see a demo in a more compact version based on the original project. Username: demo@user.de, Password: linkedin."
       :buttons="customerportalButtons"
       :images="customerportalImages"
     />
@@ -91,12 +87,12 @@
     <project-img-left
       image="/project-images/mobility-dashboard.svg"
       title="Mobility Dashboard"
-      subtitle="Reporting Dashboard for a car sharing company focusing on geospacial data."
-      description="A Frontend application that shows the data of the logged in car sharing company in a user-friendly and interactive graphs and maps.
-            The application is built with Nuxt.js and uses the Leaflet library for the maps.
-            The data is pulled via RESTful API from the preexisting backend.
-            This project was built by my Co-Founder and me over the course of six months.
-            The application is currently in use at more than 30 car sharing companies."
+      subtitle="A reporting dashboard for a car-sharing company, focusing on geospatial data."
+      description=
+      "This frontend application displays data for the logged-in car-sharing company through user-friendly and interactive graphs and maps. 
+      Built with Nuxt.js, it incorporates the Leaflet library for map visualization. 
+      Data is pulled via a RESTful API from the preexisting backend. 
+      This project was co-developed by my co-founder and me over six months and is currently deployed across more than 30 car-sharing companies."
       :images="carsharingImages"
     />
   </div>
@@ -105,13 +101,14 @@
     <project-img-left
       image="/project-images/muenster-gpt.svg"
       title="Münster GPT"
-      subtitle="A Chatbot that answers questions about the city of Münster."
-      description="The Chatbot was built during the MSHACK23, and as part of the solution enabler program an ongoing project, that my team and I are working on. 
-            The Chatbot is connected to OpenAI's GPT-4 API and is built in Python using Django.
-            It uses a Chroma DB that again stores the data we scraped from the publicly available city website. 
-            The project won 2nd Place at the Hackathon. 
-            A test version of the Chatbot will most likley be available in June 2023. 
-            Feel free to go to the website and checkout our 2nd place"
+      subtitle="A chatbot designed to answer questions about the city of Münster."
+      description=
+      "Münster GPT was developed during the MSHACK23 and is now part of the Solution Enabler Program. 
+      This ongoing project, a collaborative effort by my team and me, connects to OpenAI's GPT-4 API and is developed in Python using Django. 
+      It utilizes a Chroma DB to store data scraped from the publicly available city website. 
+      Our project was awarded 2nd place at the hackathon. 
+      A test version of the chatbot is expected to be available by June 2023. 
+      We invite you to visit the website to learn more about ours and other projects."
       :buttons="gptButtons"
       tech-stack=""
       :images="gptImages"
@@ -122,11 +119,11 @@
     <project-img-left
       image="/project-images/bike-counter2.svg"
       title="Bikecounter"
-      subtitle="Small Proof-of-Concept for publicly available bike data"
-      description="A small R-Shiny application that shows the data of a publicly available bike data (csv) in user-friendly and interactive graphs and maps.
-            This was Mini-Project I built for fun over the Weekend.
-            The application is built in R-Shiny hosted on a Google Cloud Run and uses a Docker container.
-            As of my knowledge, the application ist still presented in University lectures as an example for the easy usage of Opendata."
+      subtitle="A small proof-of-concept showcasing publicly available bike data."
+      description=
+      "The Bikecounter is an R-Shiny application that presents data through user-friendly and interactive graphs and maps. 
+      I developed this mini-project for fun over a weekend. The application, built with R-Shiny, is hosted on Google Cloud Run using a Docker container. 
+      To my knowledge, the application is still used in university lectures as an exemplary demonstration of the straightforward utilization of open data."
       :buttons= "bikeButtons"
       :images="fahrradzaehlerImages"
     />
@@ -136,11 +133,11 @@
     <project-img-left
       image="/project-images/data-science.svg"
       title="Data Science Analysis and Forecasting"
-      description="During my University Studies as well as working at the DFKI I did multiple Data Science Projects.
-            They all included the cleaning and analysis of large datasets to look for correlations, trends and outliers.
-            A few projects involved forecasting Models.
-            The projects Data Science projects were built in R and Python and also used R-Shiny for the visualization of the results.
-            Below you can see a few university projects, since the DFKI projects are not publicly available."
+      description="During my university studies and my time at the DFKI (German Research Center for Artificial Intelligence), 
+      I engaged in multiple data science projects. These projects included the cleaning and analysis of large datasets to identify correlations,
+       trends, and outliers. Several projects also involved developing forecasting models. 
+       The work was primarily conducted using R and Python, incorporating R-Shiny for result visualization. 
+       Below, I have listed a few university projects for review, and one DFKI publication."
       :buttons="dataScienceButtons"
       :images="dataScienceImages"
       />
@@ -151,9 +148,11 @@
       image="/project-images/website.svg"
       title="Company Website"
       subtitle="A fast and modern company website using SEO, SEA and Google analytics"
-      description="The Website is built in nuxt and is hostet on a Hetzner server. 
-            The website is optimized for SEO and SEA and uses Google Analytics for tracking. 
-            My Co-Founder and I built the Website together and constantly updated it with new features and content."
+      description=
+      "This Website was built using Nuxt, hosted on a Hetzner server and is meticulously optimized for both SEO and SEA, 
+      ensuring high visibility and performance. 
+      My co-founder and I collaboratively developed the website, 
+      continuously updating it with new features and content to keep it fresh and engaging."
       :buttons="WebsiteButtons"
       :images="WebsiteImages"
       />
@@ -329,7 +328,7 @@ const dataScienceButtons = [
   {
     name: "DFKI Research Paper",
     link: "https://www.dfki.de/fileadmin/user_upload/DFKI/Medien/News/2022/Aus_unseren_Projekten/Smart-Service-Studie-ForeSight_web.pdf",
-    tooltip: "All Graphs in this Paper were created by me."
+    tooltip: "All graphs in this Paper were created by me."
   }
 ];
 

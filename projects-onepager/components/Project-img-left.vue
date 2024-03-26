@@ -36,12 +36,19 @@
 import { ref } from 'vue';
 
 const showTooltip = (index) => {
-    document.getElementById('tooltip-' + index).style.visibility = 'visible';
+    const tooltipElement = document.getElementById('tooltip-' + index);
+    if (tooltipElement) {
+        tooltipElement.style.visibility = 'visible';
+    }
 };
 
 const hideTooltip = (index) => {
-    document.getElementById('tooltip-' + index).style.visibility = 'hidden';
+    const tooltipElement = document.getElementById('tooltip-' + index);
+    if (tooltipElement) {
+        tooltipElement.style.visibility = 'hidden';
+    }
 };
+
 
 const props = defineProps({
     image: String,
@@ -50,7 +57,6 @@ const props = defineProps({
     buttons: Array,
     images: Array,
     subtitle: String,
-    tooltip: String,
 });
 </script>
 <style setup>
