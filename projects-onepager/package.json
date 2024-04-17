@@ -17,6 +17,8 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "@nuxtjs/color-mode": "^3.4.0",
+    "@nuxtjs/tailwindcss": "^6.11.4",
     "nuxt-headlessui": "^1.1.5"
   }
 }

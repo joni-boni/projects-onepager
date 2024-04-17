@@ -6,9 +6,12 @@ export default defineNuxtConfig({
       { path: '~/components/navs' },
       '~/components'
   ],
-  modules: [
-    'nuxt-headlessui',
-  ],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode','nuxt-headlessui'],
+  colorMode: {
+      classSuffix: '',
+      preference: 'light',
+      fallback: 'light'
+  },
   postcss: {
       plugins: {
           tailwindcss: {},
